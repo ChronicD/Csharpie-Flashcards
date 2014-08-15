@@ -10,15 +10,15 @@ namespace CSharpie_Flashcards
     {
         
 
-        public void RenderGame()
+        public void RenderGame(List<string> list)
         {
             
-            List<string> testAns = new List<string>();
+            List<string> testAns = list;
 
-            testAns.Add("Question");
-            testAns.Add("ans1");
-            testAns.Add("ans2");
-            testAns.Add("ans3");
+            //testAns.Add("Question");
+            //testAns.Add("ans1");
+            //testAns.Add("ans2");
+            //testAns.Add("ans3");
 
             string question = testAns[0];
 

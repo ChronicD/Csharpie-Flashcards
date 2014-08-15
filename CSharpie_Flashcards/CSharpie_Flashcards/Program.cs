@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CSharpie_Flashcards
 {
-    class Program
-    {
+	class Program
+	{
         static void Main(string[] args)
         {
 
@@ -43,5 +43,5 @@ namespace CSharpie_Flashcards
         }
 
  
-    }
+	}
 }
