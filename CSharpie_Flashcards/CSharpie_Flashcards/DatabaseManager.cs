@@ -62,5 +62,10 @@ namespace CSharpie_Flashcards
         {
             dataFromCSV.RemoveAt(indexNum);
         }
+
+       public List<string> Load()
+        {
+            return dataFromCSV;
+        }
     }
 }

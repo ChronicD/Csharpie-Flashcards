@@ -10,19 +10,28 @@ namespace CSharpie_Flashcards
     {
         public string CorrectAnswer = String.Empty;
         List<string> StoringQuestion = new List<string>();
-        public void PrepData()
+        DatabaseManager db = new DatabaseManager();
+        List<string> allQuestions = new List<string>();
+
+        public Model_Flashcards()
         {
-            //DatabaseQuestions Read = new DatabaseQuestions;
-            string OneQuestion = Read.load();
+            allQuestions = db.Load();
+        }
+
+        public List<string> PrepRow()
+        {
+            string oneRow = allQuestions[0];
+            allQuestions.RemoveAt(0);
 
             //DL - when refactoring change this to a linq expression
-            string[] words = OneQuestion.Split(',');
+            string[] words = oneRow.Split(',');
             CorrectAnswer = words[0];
 
             for (int i = 1; i < words.Length; i++)
             {
                 StoringQuestion.Add(words[i].Replace("\"", String.Empty).Trim(' '));
             }
+            return StoringQuestion;
         }
 
         public bool Compare(string answer)
