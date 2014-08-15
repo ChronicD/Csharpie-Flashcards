@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CSharpie_Flashcards
 {
-    class Program
-    {
+	class Program
+	{
         static void Main(string[] args)
         {
             bool quit = false;
@@ -33,5 +33,5 @@ namespace CSharpie_Flashcards
 
             } while (quit == true);
         }
-    }
+	}
 }
