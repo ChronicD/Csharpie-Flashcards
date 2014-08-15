@@ -10,16 +10,24 @@ namespace CSharpie_Flashcards
     {
         static void Main(string[] args)
         {
+
+
             bool quit = false;
             string choiceMain;
-            Console.WriteLine("Welcome to C# Anki\n");
 
-            Console.WriteLine("Press any key to Play Anki");
-            Console.WriteLine("Press Q or q to Quit Anki");
-
+            Console.WriteLine("╒════════════════════════════════╕");
+            Console.WriteLine("│                                │");
+            Console.WriteLine("│      Welcome to C# Anki        │");
+            Console.WriteLine("│                                │");
+            Console.WriteLine("│    Press any key to Play Anki  │");
+            Console.WriteLine("│    Press Q or q to Quit Anki   │");
+            Console.WriteLine("│                                │");
+            Console.WriteLine("╘════════════════════════════════╛");
+            
+            
             do
             {
-                choiceMain = Console.ReadLine();
+                choiceMain = Convert.ToString(Console.ReadKey());
                 //Console.WriteLine("You entered " + choiceMain);
                 if (choiceMain == "Q" || choiceMain == "q")
                 {
@@ -28,10 +36,12 @@ namespace CSharpie_Flashcards
                 else
                 {
                     Controller_Play playgame = new Controller_Play();
-                    playgame.Game();
+                    playgame.Game();                   
                 }
 
             } while (quit == true);
         }
+
+ 
     }
 }
