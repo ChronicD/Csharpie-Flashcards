@@ -43,9 +43,11 @@
   <ItemGroup>
     <Compile Include="DatabaseManager.cs" />
     <Compile Include="Controller_Play.cs" />
+    <Compile Include="Model_Flashcards.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View_Play.cs" />
+    <Compile Include="View_Welcome.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
